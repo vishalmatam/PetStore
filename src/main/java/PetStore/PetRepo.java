@@ -3,16 +3,22 @@ package PetStore;
 import PetStore.model.Pet;
 
 import java.util.*;
-
+/* PetRepo is the repository layer to persist loaded CSV pet data into HashMap  
+ * In future, if DB persistence is needed, then we need to update PetRepo*/
 public class PetRepo {
+    //hashmap to store pets information - uses Id as key, pet object as value
     private Map<String, Pet> petStore = new HashMap<>();
-
+    
+    //hashmap to store zipcode and associated Ids
     private Map<String, List<String>> locationIndex = new HashMap<>();
-
+    
+    //hashmap to store type and associated Ids
     private Map<String, List<String>> typeIndex = new HashMap<>();
-
+    
+    //hashmap to store gender and associated Ids
     private Map<String, List<String>> genderIndex = new HashMap<>();
-
+    
+    
     public void save(Pet pet) {
         petStore.put(pet.getId(), pet);
 
