@@ -1,5 +1,7 @@
 package PetStore.model;
 
+/*
+* Pet model - fields correspond to the columns in the CSV that is loaded */
 public class Pet {
 
     private String id;
