@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+/*PetService - service layer to fetch pet information based on location, type, gender by calling repo methods and passing search criteria*/
 public class PetService {
     private final PetRepo petRepo;
     private final ReadCsvToJavaObject readCsvToJavaObject = new ReadCsvToJavaObject();
