@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 
 public class ReadCsvToJavaObject {
     private static final String COMMA_DELIMITER = ",";
-
+    
+    //loads CSV data based on the path provided
     public List<Pet> loadCSVData(String path) {
        // String CSV_PATH = "src/main/resources/pets-without-header.csv";
         List<Pet> pets = null;
@@ -22,7 +23,8 @@ public class ReadCsvToJavaObject {
         }
         return pets;
     }
-
+    
+    //maps each line from the CSV to build a Pet
     private Pet mapLineToPet(String line) {
         String[] petsArray = line.split(COMMA_DELIMITER);
         Pet pet = new Pet();
