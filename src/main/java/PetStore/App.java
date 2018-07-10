@@ -4,7 +4,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
+/*
+## Instructions to run the application:
+1. Run the application App.java - `First load the CSV, then provide search options as shown below`
+2. From the command line provide the path to csv file as shown: `LOAD` `src/main/resources/pets-without-header.csv` . 
+   This will print the number of pets in the CSV
+3. From the command line, print the loaded CSV contents as shown: `PRINT` `1`
+4. From the command line, to search for pets by location/zipcode: `LOC` `97205`
+5. From the command line, to search for pets by gender: `GENDER` `male`
+6. From the command line, to search for pets by type: `TYPE` `dog`
+7. From the command line: `EXIT` to exit the application
+*/
 public class App {
     private final PetService petService = new PetService(new PetRepo());
     private static final String EXIT = "EXIT";
